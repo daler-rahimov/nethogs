@@ -120,7 +120,6 @@ std::string getcmdline(pid_t pid) {
   const int maxfilenamelen = 14 + MAX_PID_LENGTH + 1;
   char filename[maxfilenamelen];
 
-  std::cerr << "Calling getcmdline, pid: " << pid << std::endl;
   std::snprintf(filename, maxfilenamelen, "/proc/%d/cmdline", pid);
   std::string cmdline;
   bool replace_null = false;
